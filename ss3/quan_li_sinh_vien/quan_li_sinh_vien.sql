@@ -45,16 +45,16 @@ values
 
 insert into student(student_name,address,phone,`status`,class_id)
 values
-('Hung','Ha Noi','0912113113','1','1'),
-('Hoa','Hai phong', null,'1','1'),
-('Manh','HCM','0123123123','0','2');
+('Hung','Ha Noi','0912113113',1,'1'),
+('Hoa','Hai phong', null,1,'1'),
+('Manh','HCM','0123123123',0,'2');
 
 insert into `subject`(sub_name,credit,`status`)
 values
-('CF','5','1'),
-('C','6','1'),
-('HDJ','5','1'),
-('RDBMS','10','1');
+('CF','5',1),
+('C','6',1),
+('HDJ','5',1),
+('RDBMS','10',1);
 
 insert into mark(sub_id,student_id,mark,exam_times)
 values 

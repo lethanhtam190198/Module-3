@@ -1,11 +1,13 @@
 
 -- Cau 2
 
-select * from nhan_vien where ho_ten like 'H%' or ho_ten like 'T%' or ho_ten like 'K%' and char_length(ho_ten)<15;
+select * from nhan_vien 
+where ho_ten like 'H%' or ho_ten like 'T%' or ho_ten like 'K%' and char_length(ho_ten)<15;
 
 -- Cau 3
 
-select * from khach_hang where ((YEAR(CURDATE()) - YEAR(ngay_sinh)) between 18 and 50) and (dia_chi like "%Đà nẵng" or dia_chi like "%Quảng trị");
+select * from khach_hang 
+where ((YEAR(CURDATE()) - YEAR(ngay_sinh)) between 18 and 50) and (dia_chi like "%Đà nẵng" or dia_chi like "%Quảng trị");
 
 -- Cau 4
 
