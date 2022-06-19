@@ -191,4 +191,91 @@ join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem= dvdk.ma_dich_vu_di_kem
 group by dvdk.ma_dich_vu_di_kem;
 
 
+-- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới 
+-- được sử dụng một lần duy nhất. Thông tin hiển thị 
+-- bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, 
+-- so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
+
+select hd.ma_hop_dong,
+ldv.ten_loai_dich_vu,
+dvdk.ten_dich_vu_di_kem,
+count(dvdk.ma_dich_vu_di_kem) as so_lan_su_dung
+from hop_dong hd
+join dich_vu dv on hd.ma_dich_vu=dv.ma_dich_vu
+join loai_dich_vu ldv on dv.ma_loai_dich_vu= ldv.ma_loai_dich_vu
+join hop_dong_chi_tiet hdct on hd.ma_hop_dong= hdct.ma_hop_dong
+join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem= dvdk.ma_dich_vu_di_kem
+group by dvdk.ten_dich_vu_di_kem
+having count(dvdk.ma_dich_vu_di_kem)=1
+order by hd.ma_hop_dong;
+
+-- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, 
+-- ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai, 
+-- dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
+
+select nv.ma_nhan_vien,
+nv.ho_ten,
+td.ten_trinh_do,
+bp.ten_bo_phan,
+nv.so_dien_thoai,
+nv.dia_chi
+from nhan_vien nv
+join vi_tri vt on nv.ma_vi_tri=vt.ma_vi_tri
+join trinh_do td on nv.ma_trinh_do= td.ma_trinh_do
+join bo_phan bp on nv.ma_bo_phan= bp.ma_bo_phan
+join hop_dong hd on nv.ma_nhan_vien=hd.ma_nhan_vien
+where year(hd.ngay_lam_hop_dong) between 2020 and 2021
+group by nv.ma_nhan_vien
+having (count(hd.ma_hop_dong) <=3 )
+order by nv.ma_nhan_vien;
+
+-- 16.Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+
+alter table nhan_vien 
+add delete_status int default 0;
+
+alter table khach_hang 
+add delete_status int default 0;
+
+set sql_safe_updates = 0;
+update nhan_vien  
+set delete_status = 1
+where ma_nhan_vien not in (
+select * from (
+select NV.ma_nhan_vien from nhan_vien NV 
+join hop_dong HD on NV.ma_nhan_vien = HD.ma_nhan_vien
+where year(ngay_lam_hop_dong) between 2019 and 2021) temp);
+
+-- 17.	Cập nhật thông tin những khách hàng có ten_loai_khach từ 
+-- Platinum lên Diamond, chỉ cập nhật những khách hàng đã từng
+--  đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
+
+update khach_hang 
+set ma_loai_khach = 1
+where ma_khach_hang in 
+(select * from ( 
+select KH.ma_khach_hang from khach_hang KH
+join hop_dong HD on KH.ma_khach_hang = HD.ma_khach_hang 
+left join dich_vu DV on HD.ma_dich_vu = DV.ma_dich_vu
+left join hop_dong_chi_tiet HDCT on HD.ma_hop_dong = HDCT.ma_hop_dong
+left join dich_vu_di_kem DVDK on HDCT.ma_dich_vu_di_kem = DVDK.ma_dich_vu_di_kem
+where year(HD.ngay_lam_hop_dong) = 2021 
+group by  HD.ma_hop_dong 
+having (sum(DV.chi_phi_thue+HDCT.so_luong*DVDK.gia))>=10000000) temp);
+
+-- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 
+-- (chú ý ràng buộc giữa các bảng).
+
+update dich_vu_di_kem 
+set gia = gia *2 where dich_vu_di_kem.ma_dich_vu_di_kem in(
+select * from(
+select dich_vu_di_kem.ma_dich_vu_di_kem
+from dich_vu_di_kem
+join hop_dong_chi_tiet on dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
+join hop_dong on hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
+where hop_dong_chi_tiet.so_luong > 10 and 
+year(hop_dong.ngay_lam_hop_dong) = 2020
+)temp);
+
+
 
