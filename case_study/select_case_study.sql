@@ -8,7 +8,11 @@ and char_length(ho_ten)<15;
 -- Cau 3:
 select * from khach_hang 
 where ((YEAR(CURDATE()) - YEAR(ngay_sinh)) between 18 and 50) 
-and (dia_chi like "%Đà nẵng" or dia_chi like "%Quảng trị");
+and (dia_chi like "%Đà nẵng" or dia_chi like "%Quảng Trị");
+
+select * from khach_hang 
+where ((YEAR(CURDATE()) - YEAR(ngay_sinh)) between 18 and 50) 
+and (dia_chi like concat('%',convert('Da nang',binary) and convert('Quang Tri',binary)));
 
 -- Cau 4:
 select hd.ma_khach_hang, kh.ho_ten , count(hd.ma_khach_hang) 
@@ -51,8 +55,8 @@ dv.dien_tich,
 dv.chi_phi_thue,
 ldv.ten_loai_dich_vu
 from hop_dong hd
-join dich_vu dv on hd.ma_dich_vu= dv.ma_dich_vu 
-join loai_dich_vu ldv on dv.ma_loai_dich_vu= ldv.ma_loai_dich_vu
+ join dich_vu dv on hd.ma_dich_vu= dv.ma_dich_vu 
+ join loai_dich_vu ldv on dv.ma_loai_dich_vu= ldv.ma_loai_dich_vu
 group by dv.ma_dich_vu
 having dv.ma_dich_vu not in
 ( select dv.ma_dich_vu from hop_dong hd
@@ -103,7 +107,8 @@ select khach_hang.ho_ten from khach_hang;
 -- nghĩa là tương ứng với mỗi tháng trong năm 2021 
 -- thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
 
-select  month(ngay_lam_hop_dong) as thang,count(ma_khach_hang) as so_luong_khach_hang from hop_dong
+select  month(ngay_lam_hop_dong) as thang,count(ma_khach_hang) as so_luong_khach_hang 
+from hop_dong
 where year(ngay_lam_hop_dong)='2021'
 group by  month(ngay_lam_hop_dong) 
 order by month(ngay_lam_hop_dong) ;
@@ -245,7 +250,7 @@ where year(hd.ngay_lam_hop_dong) between 2019 and 2021
 group by ma_nhan_vien)
 ) temp);
 -- những Nhân viên đã được xoá
-
+select ma_nhan_vien, ho_ten from nhan_vien where `status` = 1;
 
 -- 17.	Cập nhật thông tin những khách hàng có ten_loai_khach từ 
 -- Platinum lên Diamond, chỉ cập nhật những khách hàng đã từng
@@ -271,9 +276,9 @@ update khach_hang kh
 set `flag`  = 1
 where kh.ma_khach_hang in 
 (select * from(
-select kh.ma_khach_hang From khach_hang kh
+select kh.ma_khach_hang from khach_hang kh
 join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
-where year(hd.ngay_lam_hop_dong) = 2020
+where year(hd.ngay_lam_hop_dong) < 2021
 group by kh.ma_khach_hang)temp);
 
 select ma_khach_hang, ho_ten from khach_hang where `flag` = 1;
@@ -320,7 +325,7 @@ from khach_hang kh;
 create view n_nhan_vien as
 select nv.* from nhan_vien nv
 join hop_dong hd on nv.ma_nhan_vien=hd.ma_nhan_vien
-where dia_chi like '%Hải Châu' and hd.ngay_lam_hop_dong='2019-12-12' and count(hd.ma_nhan_vien) >=1;
+where dia_chi like '%Hải Châu' and hd.ngay_lam_hop_dong=2019-12-12 ;
 
 drop view n_nhan_vien;
 
@@ -329,3 +334,4 @@ select * from n_nhan_vien;
 -- 22.	Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành
 --  “Liên Chiểu” đối với tất cả các nhân viên được nhìn thấy bởi khung nhìn này.
 
+update n_nhan_vien set dia_chi='Liên Chiểu';
