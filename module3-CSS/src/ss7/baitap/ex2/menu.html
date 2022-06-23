@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .menu {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            border: 1px solid #CDCDCD;
+            margin-bottom: 5px;
+        }
+
+        .menu ul, .menu li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li a {
+            width: 100px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background-color: black;
+            color: white;
+        }
+
+        .menu ul ul li a {
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .menu li a:hover {
+            background-color: red;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .loginln {
+            float: right;
+            margin-left: 6px;
+        }
+
+        .left {
+            background-color: #333333;
+            width: 20%;
+            height: 500px;
+            float: left;
+        }
+
+        .center {
+            background-color: white;
+            width: 60%;
+            height: 500px;
+            float: left;
+        }
+
+        .right {
+            background-color: #333333;
+            width: 20%;
+            height: 500px;
+            float: right;
+        }
+
+        h1, h4 {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Logo</a>
+                <ul>
+                    <li><a href="#">Logo1</a></li>
+                    <li><a href="#">Logo2</a></li>
+                    <li><a href="#">Logo3</a></li>
+                    <li><a href="#">Logo4</a></li>
+                    <li><a href="#">Logo5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Home</a>
+                <ul>
+                    <li><a href="#">Home1</a></li>
+                    <li><a href="#">Home2</a></li>
+                    <li><a href="#">Home3</a></li>
+                    <li><a href="#">Home4</a></li>
+                    <li><a href="#">Home5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a>
+                <ul>
+                    <li><a href="#">About1</a></li>
+                    <li><a href="#">About2</a></li>
+                    <li><a href="#">About3</a></li>
+                    <li><a href="#">About4</a></li>
+                    <li><a href="#">About5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Project</a>
+                <ul>
+                    <li><a href="#">Project1</a></li>
+                    <li><a href="#">Project2</a></li>
+                    <li><a href="#">Project3</a></li>
+                    <li><a href="#">Project4</a></li>
+                    <li><a href="#">Project5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contract</a>
+                <ul>
+                    <li><a href="#">Contract1</a></li>
+                    <li><a href="#">Contract2</a></li>
+                    <li><a href="#">Contract3</a></li>
+                    <li><a href="#">Contract4</a></li>
+                    <li><a href="#">Contract5</a></li>
+                </ul>
+            </li>
+        </ul>
+        <li class="login"><a class="loginln" href="#">
+            <ion-icon name="log-in-outline"></ion-icon>
+            Login</a></li>
+    </div>
+    <div>
+        <div class="left"></div>
+        <div class="center">
+            <h1>Welcome</h1>
+            <h4>Lorem ipsum dolor sut armet, cibsectetur adipiscing elit, sed do eiusmod tempor ut aaaaaaaaaaaaaa
+                aaaa aaaa aaa aaaa aaaaa aaaa aa a a a a aaaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+                <hr>
+            </h4>
+            <h2>Test</h2>
+            <h4>Lorem .....</h4>
+        </div>
+        <div class="right">
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

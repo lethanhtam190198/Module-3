@@ -1,0 +1,10 @@
+body{
+    font-family: Arial;
+}
+#menu, #menu ul, #menu li{
+    padding:0;
+    margin:0;
+    float: left;
+    list-style-type: none;
+    margin-right: 15px;
+}
