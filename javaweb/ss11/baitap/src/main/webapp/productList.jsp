@@ -32,7 +32,7 @@
     <c:forEach items="${productList}" var="product">
         <tr>
             <td>${product.id}</td>
-            <td>${product.name}</td>
+            <td><a href="/product?action=view&id=${product.getId()}">${product.name}</a></td>
             <td>${product.price}</td>
             <td>${product.producer}</td>
             <td><a href="/product?action=edit&id=${product.getId()}">edit</a></td>
