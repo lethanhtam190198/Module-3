@@ -72,7 +72,14 @@ private IProductService productService = new ProductServiceImpl();
         request.getRequestDispatcher("productList.jsp").forward(request, response);
     }
     private void saveProduct(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
+        productList = productService.findAll();
+        int max = 0;
+        for (Product item : productList) {
+            if (item.getId() > max) {
+                max = item.getId();
+            }
+        }
+        int id = max + 1;
         String name = request.getParameter("name");
         float price = Float.parseFloat(request.getParameter("price"));
         String producer = request.getParameter("producer");
@@ -133,9 +140,7 @@ private IProductService productService = new ProductServiceImpl();
         }
         try {
             dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
