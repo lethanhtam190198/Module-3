@@ -2,10 +2,7 @@ package reponsitory;
 
 import model.Product;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +15,10 @@ public class ProductReponsitoryImpl implements IProductReponsitory {
     private static final String FIND_BY_ID = "SELECT * FROM product where id = ? ";
     private static final String UPDATE = " UPDATE product SET name = ? , price = ? , " +
             " producer = ? where id = ?  " ;
+    private static final String DELETE = " DELETE FROM product where id = ? ";
+    private static final String SORT= " SELECT * FROM product ORDER BY name  ";
 
+    private static final String FINDALLPRODUCT = "CALL find_all_product()";
 
 
     @Override
@@ -76,7 +76,15 @@ public class ProductReponsitoryImpl implements IProductReponsitory {
 
     @Override
     public void delete(int id) {
-        productList.remove(id - 1);
+        try {
+            Connection connection = new BaseReponsitory().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -127,6 +135,53 @@ public class ProductReponsitoryImpl implements IProductReponsitory {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+        return productList;
+    }
+
+    @Override
+    public List<Product> sort() {
+        productList.clear();
+        try {
+            Connection connection = new BaseReponsitory().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SORT);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            Product product = null;
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                float frice = resultSet.getFloat("price");
+                String producer = resultSet.getString("producer");
+                product = new Product(id, name, frice, producer);
+                productList.add(product);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return productList;
+    }
+
+    @Override
+    public List<Product> findAllProduct() {
+        productList.clear();
+        try {
+            Connection connection = new BaseReponsitory().getConnection();
+            CallableStatement callableStatement =
+                    connection.prepareCall(FINDALLPRODUCT);
+            ResultSet resultSet = callableStatement.executeQuery();
+            Product product = null;
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                float frice = resultSet.getFloat("price");
+                String producer = resultSet.getString("producer");
+                product = new Product(id, name, frice, producer);
+                productList.add(product);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
 
         return productList;

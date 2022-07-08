@@ -18,6 +18,7 @@
 <form action="/product">
     <input type="text" name="nameSearch">
     <input type="submit" name="action" value="search">
+    <input type="submit" name="action" value="sort">
 </form>
 <form action="/product" >
 <table class="table">
@@ -42,7 +43,7 @@
 </table>
 
 </form>
-<a href="/student?action=create">Thêm mới Product</a>
+<a href="/product?action=create"> <button>Thêm mới Product</button></a>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

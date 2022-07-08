@@ -44,4 +44,14 @@ public class ProductServiceImpl implements IProductService {
     public List<Product> findByName(String name) {
         return productReponsitory.findByName(name);
     }
+
+    @Override
+    public List<Product> sort() {
+        return productReponsitory.sort();
+    }
+
+    @Override
+    public List<Product> findAllProduct() {
+        return productReponsitory.findAllProduct();
+    }
 }

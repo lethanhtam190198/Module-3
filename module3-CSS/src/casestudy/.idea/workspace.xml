@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="52f77773-04c4-48a3-ad6d-2c0495138e99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/controller/HomeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/repository/impl/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/java/service/impl/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/webapp/view/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/webapp/view/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy_Module3/src/main/webapp/view/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/giaodien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../giaodien/src/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/classes/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/classes/reponsitory/BaseReponsitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/classes/reponsitory/IProductReponsitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/classes/reponsitory/ProductReponsitoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/classes/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/classes/service/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/error-404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/productList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.64/webapps/ROOT/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/reponsitory/IProductReponsitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/reponsitory/IProductReponsitory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/reponsitory/ProductReponsitoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/reponsitory/ProductReponsitoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/classes/java/main/service/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/libs/baitap-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/libs/baitap-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/database_product.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/database_product.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/reponsitory/IProductReponsitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/reponsitory/IProductReponsitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/reponsitory/ProductReponsitoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/reponsitory/ProductReponsitoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/java/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/webapp/productList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../javaweb/ss11/baitap/src/main/webapp/productList.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2BN4Ik5vH6d9qLVJKUtjmKrJSGE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../CaseStudy_Module3" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52f77773-04c4-48a3-ad6d-2c0495138e99" name="Changes" comment="" />
+      <created>1656733131338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656733131338</updated>
+      <workItem from="1656733132743" duration="16000" />
+      <workItem from="1656904070644" duration="43000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -29,17 +29,26 @@ private IProductService productService = new ProductServiceImpl();
                 break;
             case "search":
                 findByName(request,response);
+                break;
             case "delete":
                 showDeleteForm(request,response);
+                break;
             case "edit":
                 showEditForm(request,response);
+                break;
             case "view":
                 viewProduct(request,response);
+                break;
+            case "sort":
+                sortProduct(request,response);
+                break;
             default:
                 findAll(request, response);
                 break;
         }
     }
+
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -66,8 +75,13 @@ private IProductService productService = new ProductServiceImpl();
         }
     }
 
+
+
     public void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        productList = productService.findAll();
+//        productList = productService.findAll();
+
+        productList=productService.findAllProduct();
+
         request.setAttribute("productList", productList);
         request.getRequestDispatcher("productList.jsp").forward(request, response);
     }
@@ -189,5 +203,11 @@ private IProductService productService = new ProductServiceImpl();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void sortProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        productList = productService.sort();
+        request.setAttribute("productList", productList);
+        request.getRequestDispatcher("productList.jsp").forward(request, response);
     }
 }

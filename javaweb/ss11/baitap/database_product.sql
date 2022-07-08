@@ -8,3 +8,10 @@ create table product(
 `producer` varchar(50) not null
 );
 
+DELIMITER $$
+CREATE PROCEDURE find_all_product()
+BEGIN
+    SELECT * FROM product;
+    END$$
+DELIMITER ;
+

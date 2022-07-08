@@ -19,4 +19,8 @@ public interface IProductService {
     Product findById(int id);
 
     List<Product> findByName(String name);
+
+    List<Product>  sort();
+
+    List<Product> findAllProduct();
 }
